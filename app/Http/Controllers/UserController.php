@@ -1,7 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\User;
+use App\Models\posts;
+use App\Models\comment_replies;
+use App\Models\post_comments;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -11,7 +14,8 @@ class UserController extends Controller
      */
     public function index()
     {
-        //
+        return User::all();
+        // return User::Where('fname', 'like', '%p%')->get();
     }
 
     /**
